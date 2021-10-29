@@ -1,17 +1,17 @@
 class AC:
-    __suhu = []
+    _suhu = []
     __tingkatsuhu = None
 
-    def _init_(self):
+    def __init__(self):
         self.__scan()
 
     def __scan(self):
         print('scan suhu')
-        self.__suhu = [16, 18, 20]
+        self._suhu = [16, 18, 20]
 
     def _setSuhu(self):
         print('set tingat suhu')
-        self._tingkatsuhu = self._suhu[18]
+        self.__tingkatsuhu = self._suhu[0]
 
     def getTingkatSuhu(self):
         return self.__tingkatsuhu
@@ -19,8 +19,8 @@ class AC:
 
 # Car
 class tingkatsuhu(AC):
-    def _init_(self):
-        super(tingkatsuhu, self)._init_()
+    def __init__(self):
+        super(tingkatsuhu, self).__init__()
         self._setSuhu()
 
 
